@@ -39,10 +39,7 @@ window.onscroll = () => {
 }
 
 function abrirTeams() {
-    // URL de enlace profundo de Teams (cámbiala según tus necesidades)
     var teamsUrl = "https://teams.microsoft.com/l/chat/0/0?users=<jonathan.torresmald@gmail.com>";
-  
-    // Abrir Teams en una nueva ventana o pestaña
     window.open(teamsUrl, "_blank");
   }
 

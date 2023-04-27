@@ -301,7 +301,6 @@ span {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  min-height: auto;
   padding-bottom: 5rem;
 }
 .education .education-row {
@@ -374,7 +373,6 @@ span {
   padding-top: 0.5rem;
 }
 .skills {
-  min-height: auto;
   padding-bottom: 7rem;
   background: var(--second-bg-color);
 }
@@ -451,19 +449,87 @@ span {
   width: 90%;
 }
 .skills-column:nth-child(1) .skills-content .progress:nth-child(2) .bar span {
-  width: 60%;
+  width: 70%;
 }
 .skills-column:nth-child(1) .skills-content .progress:nth-child(3) .bar span {
   width: 80%;
 }
-.skills-column:nth-child(2) .skills-content .progress:nth-child(1) .bar span {
-  width: 90%;
-}
-.skills-column:nth-child(2) .skills-content .progress:nth-child(2) .bar span {
+.skills-column:nth-child(1) .skills-content .progress:nth-child(4) .bar span {
   width: 60%;
 }
+.skills-column:nth-child(1) .skills-content .progress:nth-child(5) .bar span {
+  width: 70%;
+}
+.skills-column:nth-child(2) .skills-content .progress:nth-child(1) .bar span {
+  width: 60%;
+}
+.skills-column:nth-child(2) .skills-content .progress:nth-child(2) .bar span {
+  width: 70%;
+}
 .skills-column:nth-child(2) .skills-content .progress:nth-child(3) .bar span {
-  width: 80%;
+  width: 75%;
+}
+.portfolio {
+  padding-bottom: 7rem;
+  background: var(--second-bg-color);
+}
+.portfolio h2 {
+  display: inline-block;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+  flex-wrap: wrap;
+  font-size: 1.5rem;
+  margin-top: 8rem;
+}
+.list-item {
+  display: flex;
+  justify-content: center;
+  width: 48%;
+}
+.item-text {
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  align-items: center;
+}
+.list-link {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 30rem;
+  height: 8rem;
+  background: var(--main-color);
+  border: 0.2rem solid var(--main-color);
+  border-radius: 0.8rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: 0.1rem;
+  color: var(--bg-color);
+  z-index: 1;
+  overflow: hidden;
+  transition: 0.5s;
+}
+.list-link::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background: var(--bg-color);
+  z-index: -1;
+  transition: 0.5s;
+}
+.list-link:hover{
+  color: var(--main-color);
+  background: var(--second-bg-color);
 }
 .contact {
   min-height: auto;
@@ -618,6 +684,7 @@ section:nth-child(odd) .animate.scroll,
 .about.show-animate .animate.scroll,
 .education.show-animate .animate.scroll,
 .skills.show-animate .animate.scroll,
+.portfolio.show-animate .animate.scroll,
 .contact.show-animate .animate.scroll,
 .footer.show-animate .animate.scroll {
   transition-delay: calc(0.3s * var(--i));
